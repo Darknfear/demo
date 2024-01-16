@@ -1,8 +1,8 @@
 import { Socket } from 'socket.io';
 
 export interface IBaseSocketInterface {
-  handleConnection(socket: Socket): void;
-  middlewareImplementation(socket: Socket, next: any): void;
+  handleConnection?(socket: Socket): void;
+  handleDisconnection?(socket: Socket): void;
 }
 
 export interface ServerToClientEvents {
